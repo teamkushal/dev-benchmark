@@ -6,6 +6,7 @@ name: Original script
 on:
   schedule:
     - cron: "40 * * * *"
+  push, pull_request
 
 jobs:
   build:
