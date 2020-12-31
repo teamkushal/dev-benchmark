@@ -5,7 +5,7 @@ name: Original script
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "0 * * * *"
 
 jobs:
   build:
@@ -24,4 +24,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: sh run.sh
       if: always()
+    - run: sh angular.sh
+    if: always()
 
