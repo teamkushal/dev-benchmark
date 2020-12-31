@@ -31,7 +31,8 @@ echo "#### Angular" >> $f
 echo >> $f
 echo "- create" >> $f
 setStartTime
-time ng new benchmark1 --package-manager=yarn --routing=true --strict=true --style=scss --verbose=true --verbose=true --view-encapsulation=ShadowDom 
+time ng new benchmark1 --package-manager=yarn --routing=true --strict=true --style=scss --verbose=true --verbose=true --view-encapsulation=ShadowDom;
+time ng add --defaults @angular/material;
 logEnd
 
 cd benchmark1
