@@ -25,5 +25,5 @@ jobs:
     - run: sh run.sh
       if: always()
     - run: sh angular.sh
-    if: always()
+      if: always()
 
