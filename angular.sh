@@ -31,7 +31,7 @@ echo "#### Angular" >> $f
 echo >> $f
 echo "- create" >> $f
 setStartTime
-time ng new benchmark1 --package-manager=yarn --routing=true --strict=true --style=scss --verbose=true --verbos=true --view-encapsulation=ShadowDom 
+time ng new benchmark1 --package-manager=yarn --routing=true --strict=true --style=scss --verbose=true --verbose=true --view-encapsulation=ShadowDom 
 logEnd
 
 cd benchmark1
