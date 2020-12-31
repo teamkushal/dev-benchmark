@@ -25,48 +25,19 @@ echo >> $f
 echo "### $1" >> $f
 echo >> $f
 
-# --------- create an CRA webapp for benchmarking.
+# --------- create an Angular webapp for benchmarking.
 
-echo "#### CRA" >> $f
+echo "#### Angular" >> $f
 echo >> $f
 echo "- create" >> $f
 setStartTime
-npx create-react-app benchmark1 --template typescript
+time ng new benchmark1 --package-manager=yarn --routing=true --strict=true --style=scss --verbose=true --verbos=true --view-encapsulation=ShadowDom 
 logEnd
 
 cd benchmark1
 echo "- build" >> ../$f
 setStartTime
-npm run build
-logEnd2
-
-echo "- run tests" >> ../$f
-setStartTime
-CI=true npm run test
-logEnd2
-
-cd ..
-clean
-
-# --------- create an Express NodeJS app for benchmarking.
-
-echo >> $f
-echo "#### express" >> $f
-echo >> $f
-echo "- create" >> $f
-setStartTime
-npx express-generator-typescript --with-auth benchmark2
-logEnd
-
-cd benchmark2
-echo "- build" >> ../$f
-setStartTime
-npm run build
-logEnd2
-
-echo "- run tests" >> ../$f
-setStartTime
-npx ts-node -r tsconfig-paths/register ./spec
+npm run ng build --prod
 logEnd2
 
 cd ..
