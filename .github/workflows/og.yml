@@ -5,7 +5,7 @@ name: Original script
 
 on:
   schedule:
-    - cron: "40 * * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   build:
