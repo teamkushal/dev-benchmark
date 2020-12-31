@@ -16,11 +16,10 @@ clean () {
 }
 
 clean
-git stash save -u
-npm install yarn -g
-npm install ts-node -g
-npm install create-react-app -g
-npm install express-generator-typescript -g
+git stash save --include-untracked
+npm install yarn --global
+npm install ts-node --global
+npm install @angular/cli --global
 
 echo >> $f
 echo "### $1" >> $f
